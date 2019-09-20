@@ -15,3 +15,10 @@ remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 3
 remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
 
 3. The third text that show's up on most themes is "double-description" tab under the producg image. To remove this place this text at the end of your functions.php file.
+
+//remove product description
+add_filter( 'woocommerce_product_description_heading', 'remove_product_description_heading' );
+  function remove_product_description_heading() {
+  return '';
+}
+;
